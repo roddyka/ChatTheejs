@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Multiplayer e Mapa 3D</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.module.min.js",
+                "OBJLoader": "https://cdn.jsdelivr.net/npm/three@0.155.0/examples/jsm/loaders/OBJLoader.js",
+                "MTLLoader": "https://cdn.jsdelivr.net/npm/three@0.155.0/examples/jsm/loaders/MTLLoader.js",
+                "OrbitControls": "https://cdn.jsdelivr.net/npm/three@0.155.0/examples/jsm/controls/OrbitControls.js"
+            }
+        }
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div id="main-container">
+        <div id="threejs-container"></div>
+        <div id="chat-container">
+            <div id="sidebar">
+                <ul id="channels">
+                    <li>Off-topic</li>
+                </ul>
+                <div id="users-list">
+                    <ul id="users"></ul>
+                </div>
+            </div>
+            <div id="chat-box">
+                <div id="messages"></div>
+                <input type="text" id="message-input" placeholder="Digite uma mensagem..." />
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js">
+     
+    </script>
+</body>
+</html>
